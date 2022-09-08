@@ -1,11 +1,9 @@
 #Name: Esteak Shapin #Email: esteak.shapin50@myhunter.cuny.edu
 #Date: September 7, 2022
-#This program collects first and last name and formats it
+#This program repeats the phrase "Practice makes perfect." as the inputed integer
 
-fullName = input("Enter name in format firstName lastName: ")
+print("Enter repetition time:", end =" ")
+x = int(input())
 
-[firstName, lastName] = fullName.split(" ")
-
-print("name in LASTNAME, firstName format: %s %s" % (
-    lastName.capitalize(), firstName
-))
+for i in range(x):
+    print("Practice makes perfect.")
