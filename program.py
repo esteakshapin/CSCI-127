@@ -1,8 +1,11 @@
 #Name: Esteak Shapin #Email: esteak.shapin50@myhunter.cuny.edu
 #Date: September 7, 2022
-#This program counts down from 12 to 1
+#This program collects first and last name and formats it
 
-for i in range(12,0,-1):
-    print(i)
+fullName = input("Enter name in format firstName lastName: ")
 
-print("WOW")
+[firstName, lastName] = fullName.split(" ")
+
+print("name in LASTNAME, firstName format: %s %s" % (
+    lastName.capitalize(), firstName
+))
