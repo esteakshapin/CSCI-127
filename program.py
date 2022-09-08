@@ -1,9 +1,8 @@
 #Name: Esteak Shapin #Email: esteak.shapin50@myhunter.cuny.edu
 #Date: September 7, 2022
-#This program repeats the phrase "Practice makes perfect." as the inputed integer
+#This program counts down from 12 to 1
 
-print("Enter repetition time:", end =" ")
-x = int(input())
+for i in range(12,0,-1):
+    print(i)
 
-for i in range(x):
-    print("Practice makes perfect.")
+print("WOW")
