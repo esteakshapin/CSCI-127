@@ -4,8 +4,6 @@
 
 phrase = input("Enter a phrase: ")
 
-print("letter \tASCII \tnext_two_letters")
+print("letter","ASCII", "next_two_letter")
 for s in phrase:
-    print("%s \t %s \t%s" % (
-        s, ord(s), chr(ord(s) + 2)
-    ))
+    print("%6c %5i %15c"%(i,ord(i), chr(ord(i)+2)))
