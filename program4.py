@@ -11,7 +11,7 @@ t.pensize(5)
 t.shape("circle")
 
 
-for i in ['green', 'blue', 'lightBlue', 'red']:
+for i in ["green","blue","cyan","red"]:
     t.pencolor(i)
     for i in [300, 100, 100]:
         t.forward(i)
