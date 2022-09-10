@@ -6,4 +6,4 @@ phrase = input("Enter a phrase: ")
 
 print("letter","ASCII", "next_two_letter")
 for s in phrase:
-    print("%6c %5i %15c"%(i,ord(i), chr(ord(i)+2)))
+    print("%6c %5i %15c"%(s,ord(s), chr(ord(s)+2)))
