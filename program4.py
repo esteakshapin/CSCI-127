@@ -12,7 +12,7 @@ t.shape("circle")
 
 
 for i in ["green","blue","cyan","red"]:
-    t.pencolor(i)
+    t.color(i)
     for i in [300, 100, 100]:
         t.forward(i)
         t.right(90)
