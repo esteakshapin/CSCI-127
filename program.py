@@ -6,7 +6,7 @@ fullName = input("Enter name in format firstName lastName: ")
 
 [firstName, lastName] = fullName.split(" ")
 
-print("name in LASTNAME, firstName format: %s %s" % (
+print("name in LASTNAME, firstName format: %s, %s" % (
     lastName.upper(), firstName
 ))
 
