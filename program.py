@@ -6,6 +6,6 @@ phrase = input("Enter a phrase: ")
 
 print("letter \tASCII \tnext_two_letters")
 for s in phrase:
-    print("%s \t %s \t%s,%s" % (
-        s, ord(s), chr(ord(s) + 1), chr(ord(s) + 2)
+    print("%s \t %s \t%s" % (
+        s, ord(s), chr(ord(s) + 2)
     ))
