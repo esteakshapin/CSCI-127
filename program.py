@@ -9,3 +9,6 @@ fullName = input("Enter name in format firstName lastName: ")
 print("name in LASTNAME, firstName format: %s %s" % (
     lastName.capitalize(), firstName
 ))
+
+username = input("Enter user name of email: ")
+print("email: %s@hunter.cuny.edu" % (username.lower()))
