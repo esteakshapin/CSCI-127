@@ -16,7 +16,7 @@ size = 50
 #angle
 angle = 180 - 150
 
-for i in range(n+1):
+for i in range(n):
     t.forward(size)
     t.left(angle)
 
