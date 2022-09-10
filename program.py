@@ -7,7 +7,7 @@ fullName = input("Enter name in format firstName lastName: ")
 [firstName, lastName] = fullName.split(" ")
 
 print("name in LASTNAME, firstName format: %s %s" % (
-    lastName.capitalize(), firstName
+    lastName.upper(), firstName
 ))
 
 username = input("Enter user name of email: ")
