@@ -1,11 +1,39 @@
 #Name: Esteak Shapin #Email: esteak.shapin50@myhunter.cuny.edu
 #Date: September 7, 2022
-#This program prints out the ASCII code (+ next 2 letters) from the given input
+#This program generates a map
 
-phrase = input("Enter a phrase: ")
+#Import the libraries for arrays and displaying images:
+import numpy as np
+import matplotlib.pyplot as plt
 
-print("letter \tASCII \tnext_two_letters")
-for s in phrase:
-    print("%s \t %s \t%s,%s" % (
-        s, ord(s), chr(ord(s) + 1), chr(ord(s) + 2)
-    ))
+
+#Read in the data to an array, called elevations:
+elevations = np.loadtxt('elevationsNYC.txt')
+
+#Take the shape (dimensions) of the elevations
+#  and add another dimension to hold the 3 color channels:
+mapShape = elevations.shape + (3,)
+
+#Create a blank image that's all zeros:
+floodMap = np.zeros(mapShape)
+
+for row in range(mapShape[0]):
+    for col in range(mapShape[1]):
+        if elevations[row,col] <= 0:
+            #Below sea level
+           floodMap[row,col,2] = 1.0     #Set the blue channel to 100%
+        elif elevations[row,col] <= 6:
+            #sets red to yellow
+           floodMap[row,col,0] = 1.0     #Set the red channel to 100%
+           floodMap[row,col,1] = 1.0
+        else:
+            #Above the 6 foot storm surge and didn't flood
+            floodMap[row,col,1] = 1.0   #Set the green channel to 100%
+        
+        if elevations[row,col] > 6 and elevations[row,col] <= 20:
+            floodMap[row,col,0] = .5 
+            floodMap[row,col,1] = .5 
+            floodMap[row,col,2] = .5 
+
+#Save the image:
+plt.imsave('floodMap.png', floodMap)
